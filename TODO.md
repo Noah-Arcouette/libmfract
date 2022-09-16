@@ -1,0 +1,81 @@
+ - 2 bytes ( 16 bit )
+     - [ ] Addition
+        - [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Subtraction
+        - [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Multiplication
+        - [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Division
+        - [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Power
+        - [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Modulo
+     - [x] Convert to integer
+     - [x] Convert to fraction
+     - [ ] Convert float to fraction
+     - [ ] Convert fraction to float
+     - [x] Simplify
+ - 4 bytes ( 32 bit )
+     - [ ] Addition
+     	- [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Subtraction
+     	- [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Multiplication
+     	- [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Division
+     	- [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Power
+        - [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Modulo
+     - [x] Convert to integer
+     - [x] Convert to fraction
+     - [ ] Convert float to fraction
+     - [ ] Convert fraction to float
+     - [x] Simplify
+ - 8 bytes ( 64 bit )
+     - [ ] Addition
+        - [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Subtraction
+        - [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Multiplication
+        - [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Division
+        - [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Power
+        - [ ] Simplify
+        - [ ] With integer
+        - [ ] To integer
+     - [ ] Modulo
+     - [x] Convert to integer
+     - [x] Convert to fraction
+     - [ ] Convert float to fraction
+     - [ ] Convert fraction to float
+     - [x] Simplify
