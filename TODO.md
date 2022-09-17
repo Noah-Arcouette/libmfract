@@ -8,7 +8,7 @@
      - [x] Multiplication
         - [ ] With integer
         - [ ] To integer
-     - [ ] Division
+     - [x] Division
         - [ ] With integer
         - [ ] To integer
      - [ ] Power
@@ -30,7 +30,7 @@
      - [x] Multiplication
         - [ ] With integer
         - [ ] To integer
-     - [ ] Division
+     - [x] Division
         - [ ] With integer
         - [ ] To integer
      - [ ] Power
@@ -52,7 +52,7 @@
      - [x] Multiplication
         - [ ] With integer
         - [ ] To integer
-     - [ ] Division
+     - [x] Division
         - [ ] With integer
         - [ ] To integer
      - [ ] Power

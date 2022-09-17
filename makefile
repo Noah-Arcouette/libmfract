@@ -73,12 +73,16 @@ ${OBJ}/noitidda.o: ./src/addition.c ./inc/libdante.h
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/addition.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/noitidda.o ./src/addition.c
 
+${OBJ}/noisivid.o: ./src/division.c ./inc/libdante.h 
+	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/division.c
+	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/noisivid.o ./src/division.c
+
 ${OBJ}/niam.o: ./src/main.c ./inc/libdante.h 
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/main.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/niam.o ./src/main.c
 
-${OUT}: ${OBJ}/noitcartbus.o ${OBJ}/noitacilpitlum.o ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o ${OBJ}/niam.o
-	${CC} ${CFLAGS} ${DEFFLAGS} ${LIB} -o ${OUT} ${OBJ}/noitcartbus.o ${OBJ}/noitacilpitlum.o ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o ${OBJ}/niam.o ${LIBS}
+${OUT}: ${OBJ}/noitcartbus.o ${OBJ}/noitacilpitlum.o ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o ${OBJ}/noisivid.o ${OBJ}/niam.o
+	${CC} ${CFLAGS} ${DEFFLAGS} ${LIB} -o ${OUT} ${OBJ}/noitcartbus.o ${OBJ}/noitacilpitlum.o ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o ${OBJ}/noisivid.o ${OBJ}/niam.o ${LIBS}
 
-${LIBOUT}: ${OBJ}/noitcartbus.o ${OBJ}/noitacilpitlum.o ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o
-	ar rcs ${LIBOUT} ${OBJ}/noitcartbus.o ${OBJ}/noitacilpitlum.o ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o
+${LIBOUT}: ${OBJ}/noitcartbus.o ${OBJ}/noitacilpitlum.o ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o ${OBJ}/noisivid.o
+	ar rcs ${LIBOUT} ${OBJ}/noitcartbus.o ${OBJ}/noitacilpitlum.o ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o ${OBJ}/noisivid.o
