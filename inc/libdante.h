@@ -23,8 +23,8 @@ typedef fraction32 fraction;
 	fraction64: f64float(x)\
 )
 #define f16float(f) ((float)((uint8_t)(f>>sizeof(fraction16)*4)) / (float)((uint8_t)f))
-#define f32float(f) ((double)((uint16_t)(f>>sizeof(fraction32)*4)) / (double)((uint16_t)f))
-#define f64float(f) ((long double)((uint32_t)(f>>sizeof(fraction64)*4)) / (long double)((uint32_t)f))
+#define f32float(f) ((float)((uint16_t)(f>>sizeof(fraction32)*4)) / (float)((uint16_t)f))
+#define f64float(f) ((double)((uint32_t)(f>>sizeof(fraction64)*4)) / (double)((uint32_t)f))
 
 
 #define fsimplify(x) _Generic((x), \
