@@ -17,4 +17,9 @@ typedef fraction32 fraction;
 fraction16 f16simplify (fraction16);
 fraction32 f32simplify (fraction32);
 fraction64 f64simplify (fraction64);
+
+#define fadd(x, y) (f32add(x, y))
+fraction16 f16add (fraction16, fraction16);
+fraction32 f32add (fraction32, fraction32);
+fraction64 f64add (fraction64, fraction64);
 #endif

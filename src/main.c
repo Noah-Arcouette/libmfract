@@ -3,13 +3,12 @@
 
 int main ()
 {
-	fraction64 f = Fraction(1, 0xffffffff, fraction64);
+	fraction f = Fraction(1, 5, fraction);
+	fraction x = Fraction(1, 2, fraction);
 
-	printf("%d %016lx\n", F64Int(f), f);
+	fraction y = fadd(f, x);
 
-	f = f64simplify(f);
-
-	printf("%d %016lx\n", F64Int(f), f);
+	printf("%08x %08x %08x\n", f, x, y);
 
 	return 0;
 }

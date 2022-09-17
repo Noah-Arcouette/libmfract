@@ -57,32 +57,20 @@ ifndef VERBOSE
 .SILENT:
 endif
 
-${OBJ}/noisrevnoc.o: ./src/conversion.c 
-	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/conversion.c
-	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/noisrevnoc.o ./src/conversion.c
-
-${OBJ}/rewop.o: ./src/power.c 
-	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/power.c
-	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/rewop.o ./src/power.c
-
-${OBJ}/yfilpmis.o: ./src/simplify.c 
+${OBJ}/yfilpmis.o: ./src/simplify.c ./inc/libdante.h 
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/simplify.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/yfilpmis.o ./src/simplify.c
+
+${OBJ}/noitidda.o: ./src/addition.c ./inc/libdante.h 
+	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/addition.c
+	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/noitidda.o ./src/addition.c
 
 ${OBJ}/niam.o: ./src/main.c ./inc/libdante.h 
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/main.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/niam.o ./src/main.c
 
-${OBJ}/sa.o: ./src/as.c 
-	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/as.c
-	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/sa.o ./src/as.c
+${OUT}: ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o ${OBJ}/niam.o
+	${CC} ${CFLAGS} ${DEFFLAGS} ${LIB} -o ${OUT} ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o ${OBJ}/niam.o ${LIBS}
 
-${OBJ}/dm.o: ./src/md.c 
-	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/md.c
-	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/dm.o ./src/md.c
-
-${OUT}: ${OBJ}/noisrevnoc.o ${OBJ}/rewop.o ${OBJ}/yfilpmis.o ${OBJ}/niam.o ${OBJ}/sa.o ${OBJ}/dm.o
-	${CC} ${CFLAGS} ${DEFFLAGS} ${LIB} -o ${OUT} ${OBJ}/noisrevnoc.o ${OBJ}/rewop.o ${OBJ}/yfilpmis.o ${OBJ}/niam.o ${OBJ}/sa.o ${OBJ}/dm.o ${LIBS}
-
-${LIBOUT}: ${OBJ}/noisrevnoc.o ${OBJ}/rewop.o ${OBJ}/yfilpmis.o ${OBJ}/sa.o ${OBJ}/dm.o
-	ar rcs ${LIBOUT} ${OBJ}/noisrevnoc.o ${OBJ}/rewop.o ${OBJ}/yfilpmis.o ${OBJ}/sa.o ${OBJ}/dm.o
+${LIBOUT}: ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o
+	ar rcs ${LIBOUT} ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o
