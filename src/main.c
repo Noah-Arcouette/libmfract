@@ -6,7 +6,7 @@ int main ()
 	fraction f = Fraction(1, 2, fraction);
 	fraction x = Fraction(1, 5, fraction);
 
-	fraction y = fsub(f, x);
+	fraction y = fmul(f, x);
 
 	printf("%08x %08x %08x\n", f, x, y);
 

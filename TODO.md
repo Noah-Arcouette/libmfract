@@ -5,7 +5,7 @@
      - [x] Subtraction
         - [ ] With integer
         - [ ] To integer
-     - [ ] Multiplication
+     - [x] Multiplication
         - [ ] With integer
         - [ ] To integer
      - [ ] Division
@@ -27,7 +27,7 @@
      - [x] Subtraction
         - [ ] With integer
         - [ ] To integer
-     - [ ] Multiplication
+     - [x] Multiplication
         - [ ] With integer
         - [ ] To integer
      - [ ] Division
@@ -49,7 +49,7 @@
      - [x] Subtraction
         - [ ] With integer
         - [ ] To integer
-     - [ ] Multiplication
+     - [x] Multiplication
         - [ ] With integer
         - [ ] To integer
      - [ ] Division

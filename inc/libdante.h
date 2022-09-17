@@ -27,4 +27,9 @@ fraction64 f64add (fraction64, fraction64);
 fraction16 f16sub (fraction16, fraction16);
 fraction32 f32sub (fraction32, fraction32);
 fraction64 f64sub (fraction64, fraction64);
+
+#define fmul(x, y) (f32mul(x, y))
+fraction16 f16mul (fraction16, fraction16);
+fraction32 f32mul (fraction32, fraction32);
+fraction64 f64mul (fraction64, fraction64);
 #endif
