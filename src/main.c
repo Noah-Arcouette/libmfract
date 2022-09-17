@@ -3,10 +3,10 @@
 
 int main ()
 {
-	fraction f = Fraction(1, 5, fraction);
-	fraction x = Fraction(1, 2, fraction);
+	fraction f = Fraction(1, 2, fraction);
+	fraction x = Fraction(1, 5, fraction);
 
-	fraction y = fadd(f, x);
+	fraction y = fsub(f, x);
 
 	printf("%08x %08x %08x\n", f, x, y);
 

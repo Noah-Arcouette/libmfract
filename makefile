@@ -57,6 +57,10 @@ ifndef VERBOSE
 .SILENT:
 endif
 
+${OBJ}/noitcartbus.o: ./src/subtraction.c ./inc/libdante.h 
+	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/subtraction.c
+	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/noitcartbus.o ./src/subtraction.c
+
 ${OBJ}/yfilpmis.o: ./src/simplify.c ./inc/libdante.h 
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/simplify.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/yfilpmis.o ./src/simplify.c
@@ -69,8 +73,8 @@ ${OBJ}/niam.o: ./src/main.c ./inc/libdante.h
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/main.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/niam.o ./src/main.c
 
-${OUT}: ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o ${OBJ}/niam.o
-	${CC} ${CFLAGS} ${DEFFLAGS} ${LIB} -o ${OUT} ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o ${OBJ}/niam.o ${LIBS}
+${OUT}: ${OBJ}/noitcartbus.o ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o ${OBJ}/niam.o
+	${CC} ${CFLAGS} ${DEFFLAGS} ${LIB} -o ${OUT} ${OBJ}/noitcartbus.o ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o ${OBJ}/niam.o ${LIBS}
 
-${LIBOUT}: ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o
-	ar rcs ${LIBOUT} ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o
+${LIBOUT}: ${OBJ}/noitcartbus.o ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o
+	ar rcs ${LIBOUT} ${OBJ}/noitcartbus.o ${OBJ}/yfilpmis.o ${OBJ}/noitidda.o

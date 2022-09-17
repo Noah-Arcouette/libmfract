@@ -2,7 +2,7 @@
      - [x] Addition
         - [ ] With integer
         - [ ] To integer
-     - [ ] Subtraction
+     - [x] Subtraction
         - [ ] With integer
         - [ ] To integer
      - [ ] Multiplication
@@ -24,7 +24,7 @@
      - [x] Addition
         - [ ] With integer
         - [ ] To integer
-     - [ ] Subtraction
+     - [x] Subtraction
         - [ ] With integer
         - [ ] To integer
      - [ ] Multiplication
@@ -46,7 +46,7 @@
      - [x] Addition
         - [ ] With integer
         - [ ] To integer
-     - [ ] Subtraction
+     - [x] Subtraction
         - [ ] With integer
         - [ ] To integer
      - [ ] Multiplication
