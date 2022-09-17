@@ -13,9 +13,19 @@ typedef fraction32 fraction;
 	fraction32: f32int(x),\
 	fraction64: f64int(x)\
 )
-#define f16int(x) (uint8_t)(f>>sizeof(fraction16)*4) / (uint8_t)f
-#define f32int(x) (uint16_t)(f>>sizeof(fraction32)*4) / (uint16_t)f
-#define f64int(x) (uint32_t)(f>>sizeof(fraction64)*4) / (uint32_t)f
+#define f16int(f) ((uint8_t)(f>>sizeof(fraction16)*4) / (uint8_t)f)
+#define f32int(f) ((uint16_t)(f>>sizeof(fraction32)*4) / (uint16_t)f)
+#define f64int(f) ((uint32_t)(f>>sizeof(fraction64)*4) / (uint32_t)f)
+
+#define ffloat(x) _Generic((x), \
+	fraction16: f16float(x),\
+	fraction32: f32float(x),\
+	fraction64: f64float(x)\
+)
+#define f16float(f) ((float)((uint8_t)(f>>sizeof(fraction16)*4)) / (float)((uint8_t)f))
+#define f32float(f) ((double)((uint16_t)(f>>sizeof(fraction32)*4)) / (double)((uint16_t)f))
+#define f64float(f) ((long double)((uint32_t)(f>>sizeof(fraction64)*4)) / (long double)((uint32_t)f))
+
 
 #define fsimplify(x) _Generic((x), \
 	fraction16: f16simplify(x),\

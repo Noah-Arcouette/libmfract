@@ -18,7 +18,7 @@
      - [x] Convert to integer
      - [x] Convert to fraction
      - [ ] Convert float to fraction
-     - [ ] Convert fraction to float
+     - [x] Convert fraction to float
      - [x] Simplify
  - 4 bytes ( 32 bit )
      - [x] Addition
@@ -40,7 +40,7 @@
      - [x] Convert to integer
      - [x] Convert to fraction
      - [ ] Convert float to fraction
-     - [ ] Convert fraction to float
+     - [x] Convert fraction to float
      - [x] Simplify
  - 8 bytes ( 64 bit )
      - [x] Addition
@@ -62,5 +62,5 @@
      - [x] Convert to integer
      - [x] Convert to fraction
      - [ ] Convert float to fraction
-     - [ ] Convert fraction to float
+     - [x] Convert fraction to float
      - [x] Simplify
