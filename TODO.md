@@ -17,7 +17,7 @@
      - [ ] Modulo
      - [x] Convert to integer
      - [x] Convert to fraction
-     - [ ] Convert float to fraction
+     - [x] Convert float to fraction
      - [x] Convert fraction to float
      - [x] Simplify
  - 4 bytes ( 32 bit )
@@ -39,7 +39,7 @@
      - [ ] Modulo
      - [x] Convert to integer
      - [x] Convert to fraction
-     - [ ] Convert float to fraction
+     - [x] Convert float to fraction
      - [x] Convert fraction to float
      - [x] Simplify
  - 8 bytes ( 64 bit )
@@ -61,6 +61,6 @@
      - [ ] Modulo
      - [x] Convert to integer
      - [x] Convert to fraction
-     - [ ] Convert float to fraction
+     - [x] Convert float to fraction
      - [x] Convert fraction to float
      - [x] Simplify

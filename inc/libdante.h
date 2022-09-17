@@ -71,4 +71,8 @@ fraction64 f64mul (fraction64, fraction64);
 fraction16 f16div (fraction16, fraction16);
 fraction32 f32div (fraction32, fraction32);
 fraction64 f64div (fraction64, fraction64);
+
+fraction16 f16apr (float, unsigned int);
+fraction32 f32apr (float, unsigned int);
+fraction64 f64apr (double, unsigned int);
 #endif

@@ -1,14 +1,10 @@
 #include "libdante.h"
 #include <stdio.h>
-
 int main ()
 {
-	fraction64 f = Fraction(1, 2, fraction64);
-	fraction64 x = Fraction(1, 5, fraction64);
+	fraction64 y = f64apr(3.141592653589793, 330);
 
-	fraction64 y = fsub(f, x);
-
-	printf("%Lf %ld\n", ffloat(y), y);
+	printf("%016lx %.22lf\n", y, f64float(y));
 
 	return 0;
 }
