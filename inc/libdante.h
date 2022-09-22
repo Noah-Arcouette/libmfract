@@ -6,7 +6,18 @@ typedef uint32_t fraction32;
 typedef uint16_t fraction16;
 typedef fraction32 fraction;
 
-#define Fraction(a, b, s) (((s)a << (sizeof(s)*4)) + (s)b)
+#define Fraction(a, b, s) (((s)(a) << (sizeof(s)*4)) + (s)(b))
+
+#define fnum(x) _Generic((x), \
+	fraction16: (uint8_t)((x) >> (sizeof(fraction16)*4)),\
+	fraction32: (uint16_t)((x) >> (sizeof(fraction32)*4)),\
+	fraction64: (uint32_t)((x) >> (sizeof(fraction64)*4))\
+)
+#define fden(x) _Generic((x), \
+	fraction16: (uint8_t)(x),\
+	fraction32: (uint16_t)(x),\
+	fraction64: (uint32_t)(x)\
+)
 
 #define fint(x) _Generic((x), \
 	fraction16: f16int(x),\
@@ -75,4 +86,13 @@ fraction64 f64div (fraction64, fraction64);
 fraction16 f16apr (float, unsigned int);
 fraction32 f32apr (float, unsigned int);
 fraction64 f64apr (double, unsigned int);
+
+#define fchk(x, y) _Generic((x), \
+	fraction16: f16chk(x, y),\
+	fraction32: f32chk(x, y),\
+	fraction64: f64chk(x, y)\
+)
+int f32chk (fraction32, fraction32);
+int f16chk (fraction16, fraction16);
+int f64chk (fraction64, fraction64);
 #endif

@@ -1,10 +1,25 @@
 #include "libdante.h"
 #include <stdio.h>
+#define PHI 3012527569797290405
+
 int main ()
 {
-	fraction64 y = f64apr(3.141592653589793, 330);
+	fraction f   = Fraction(1, 2, fraction);
+	fraction b   = Fraction(2, 1, fraction);
+	fraction one = Fraction(1, 1, fraction);
 
-	printf("%016lx %.22lf\n", y, f64float(y));
+	f = fmul(f, b);
 
+	f = fsimplify(f);
+
+	if (fchk(one, f))
+	{
+		printf("1\n");
+	}
+	else
+	{
+		printf("%08x\n", f);
+	}
+	
 	return 0;
 }
