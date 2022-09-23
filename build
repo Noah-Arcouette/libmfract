@@ -2,5 +2,5 @@
 
 if make
 then
-	./bin/libfract
+	./bin/libmfract
 fi

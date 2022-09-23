@@ -1,0 +1,10 @@
+#!/bin/sh
+
+make clean
+
+sudo rm /lib/libmfract.a -f
+sudo rm /usr/include/mfract.h -f
+
+sudo rm /etc/mimik/docs/LibMFract/ -rf
+
+printf "\x1b[1;32mUninstalled!\x1b[0m\n"

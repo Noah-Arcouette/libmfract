@@ -1,0 +1,13 @@
+#!/bin/sh
+
+mkdir -p ./bin/ ./obj/
+
+make build CFLAGS="$1" VERSION="1.0"
+
+sudo cp ./bin/libmfract.a /lib/libmfract.a
+sudo cp ./inc/mfract.h /usr/include/mfract.h
+
+sudo mkdir -p /etc/mimik/docs/LibMFract
+sudo cp ./doc/* /etc/mimik/docs/LibMFract/
+
+printf "\x1b[1;32mInstalled!\x1b[0m\n"
