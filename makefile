@@ -9,8 +9,8 @@ OBJ     = ./obj
 BIN     = ./bin
 
 #binary info
-NAME    = dante
-VERSION = 0.0
+NAME    = libfract
+VERSION = 1.0
 LIBOUT = ${BIN}/${NAME}.a
 
 
@@ -42,7 +42,7 @@ clean: message clean_part
 gen: message clean_part
 	printf "\x1b[1;39m━━━━━━━━━━━━━┛\x1b[0m\n\n"
 
-	hd -n dante -v 0.0 -m makefile -b ./bin -o ./obj -S  -s ./src -i ./inc -i ./snp -f -O2 -f -g -f -Wall -f -Wextra -T ./src/main.c
+	hd -n libfract -v 1.0 -m makefile -b ./bin -o ./obj -S  -s ./src -i ./inc -i ./snp -f -O2 -f -g -f -Wall -f -Wextra -T ./src/main.c
 	printf "\x1b[1;32m\n━━━━━━━━━━━━━┓\nSUCCESS      ┃  \x1b[39mCreate new\x1b[35m MakeFile \x1b[32m\n━━━━━━━━━━━━━┛\x1b[0m\n"
 
 # print settings
