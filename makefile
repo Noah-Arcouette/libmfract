@@ -57,35 +57,35 @@ ifndef VERBOSE
 .SILENT:
 endif
 
-${OBJ}/oludom.o: ./src/modulo.c ./inc/libdante.h 
+${OBJ}/oludom.o: ./src/modulo.c ./inc/mfract.h 
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/modulo.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/oludom.o ./src/modulo.c
 
-${OBJ}/noitcartbus.o: ./src/subtraction.c ./inc/libdante.h 
+${OBJ}/noitcartbus.o: ./src/subtraction.c ./inc/mfract.h 
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/subtraction.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/noitcartbus.o ./src/subtraction.c
 
-${OBJ}/trevnoc.o: ./src/convert.c ./inc/libdante.h 
+${OBJ}/trevnoc.o: ./src/convert.c ./inc/mfract.h 
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/convert.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/trevnoc.o ./src/convert.c
 
-${OBJ}/noitacilpitlum.o: ./src/multiplication.c ./inc/libdante.h 
+${OBJ}/noitacilpitlum.o: ./src/multiplication.c ./inc/mfract.h 
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/multiplication.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/noitacilpitlum.o ./src/multiplication.c
 
-${OBJ}/yfilpmis.o: ./src/simplify.c ./inc/libdante.h 
+${OBJ}/yfilpmis.o: ./src/simplify.c ./inc/mfract.h 
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/simplify.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/yfilpmis.o ./src/simplify.c
 
-${OBJ}/noitidda.o: ./src/addition.c ./inc/libdante.h 
+${OBJ}/noitidda.o: ./src/addition.c ./inc/mfract.h 
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/addition.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/noitidda.o ./src/addition.c
 
-${OBJ}/noisivid.o: ./src/division.c ./inc/libdante.h 
+${OBJ}/noisivid.o: ./src/division.c ./inc/mfract.h 
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/division.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/noisivid.o ./src/division.c
 
-${OBJ}/niam.o: ./src/main.c ./inc/libdante.h 
+${OBJ}/niam.o: ./src/main.c ./inc/mfract.h 
 	printf "\x1b[1;39m━━━━━━━━━━━━━┫\n\x1b[35mFILE         \x1b[39m┃  \x1b[39m %s\x1b[39m\n━━━━━━━━━━━━━┫\x1b[0m\n" ./src/main.c
 	${CC} -c ${DEFFLAGS} ${CFLAGS} -o ${OBJ}/niam.o ./src/main.c
 

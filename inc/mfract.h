@@ -1,5 +1,5 @@
-#ifndef __LIBRARY_DANTE_H__
-#define __LIBRARY_DANTE_H__
+#ifndef __LIBRARY_MIMIK_FRACT_H__
+#define __LIBRARY_MIMIK_FRACT_H__
 #include <stdint.h>
 typedef uint64_t fraction64;
 typedef uint32_t fraction32;
