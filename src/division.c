@@ -26,7 +26,7 @@ fraction16 f16div (fraction16 x, fraction16 y)
 
 	return ((
 		(uint16_t)(xa*yb)
-	) << (sizeof(fraction32)*4))
+	) << (sizeof(fraction16)*4))
 	+ (uint16_t)(xb*ya);
 }
 
@@ -40,7 +40,7 @@ fraction64 f64div (fraction64 x, fraction64 y)
 
 	return ((
 		(uint64_t)(xa*yb)
-	) << (sizeof(fraction32)*4))
+	) << (sizeof(fraction64)*4))
 	+ (uint64_t)(xb*ya);
 }
 
