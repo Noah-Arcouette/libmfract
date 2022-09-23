@@ -1,5 +1,5 @@
  - 2 bytes ( 16 bit )
-     - [x] Fraction Equals
+     - [x] Fraction Normalization
      - [x] Addition
      - [x] Subtraction
      - [x] Multiplication
@@ -11,8 +11,9 @@
      - [x] Convert float to fraction
      - [x] Convert fraction to float
      - [x] Simplify
+     - [ ] Simple Mathematical Constants
  - 4 bytes ( 32 bit )
-     - [x] Fraction Equals
+     - [x] Fraction Normalization
      - [x] Addition
      - [x] Subtraction
      - [x] Multiplication
@@ -24,8 +25,9 @@
      - [x] Convert float to fraction
      - [x] Convert fraction to float
      - [x] Simplify
+     - [ ] Simple Mathematical Constants
  - 8 bytes ( 64 bit )
-     - [x] Fraction Equals
+     - [x] Fraction Normalization
      - [x] Addition
      - [x] Subtraction
      - [x] Multiplication
@@ -37,3 +39,4 @@
      - [x] Convert float to fraction
      - [x] Convert fraction to float
      - [x] Simplify
+     - [ ] Simple Mathematical Constants

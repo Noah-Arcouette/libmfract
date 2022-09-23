@@ -5,21 +5,23 @@
 int main ()
 {
 	fraction f   = Fraction(1, 2, fraction);
-	fraction b   = Fraction(2, 1, fraction);
 	fraction one = Fraction(1, 1, fraction);
 
-	f = fmul(f, b);
+	f = f32mul(f, Fraction(2, 1, fraction));
 
-	f = fsimplify(f);
+	if (f32norm(f, one) == f32norm(one, f))
+	{
+		printf("Same\n");
+	}
 
-	if (fchk(one, f))
-	{
-		printf("1\n");
-	}
-	else
-	{
-		printf("%08x\n", f);
-	}
+	printf("f: %d/%d %d\none: %d/%d %d\n", 
+		f32num(f),
+		f32den(f),
+		f32norm(f, one),
+		f32num(one),
+		f32den(one),
+		f32norm(one, f)
+	);
 	
 	return 0;
 }

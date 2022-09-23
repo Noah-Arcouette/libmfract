@@ -9,15 +9,31 @@ typedef fraction32 fraction;
 #define Fraction(a, b, s) (((s)(a) << (sizeof(s)*4)) + (s)(b))
 
 #define fnum(x) _Generic((x), \
-	fraction16: (uint8_t)((x) >> (sizeof(fraction16)*4)),\
-	fraction32: (uint16_t)((x) >> (sizeof(fraction32)*4)),\
-	fraction64: (uint32_t)((x) >> (sizeof(fraction64)*4))\
+	fraction16: f16num(x),\
+	fraction32: f32num(x),\
+	fraction64: f64num(x)\
 )
+#define f16num(x) (uint8_t)((x) >> (sizeof(fraction16)*4))
+#define f32num(x) (uint16_t)((x) >> (sizeof(fraction32)*4))
+#define f64num(x) (uint32_t)((x) >> (sizeof(fraction64)*4))
+
 #define fden(x) _Generic((x), \
-	fraction16: (uint8_t)(x),\
-	fraction32: (uint16_t)(x),\
-	fraction64: (uint32_t)(x)\
+	fraction16: f16den(x),\
+	fraction32: f32den(x),\
+	fraction64: f64den(x)\
 )
+#define f16den(x) ((uint8_t)(x))
+#define f32den(x) ((uint16_t)(x))
+#define f64den(x) ((uint32_t)(x))
+
+#define fnorm(a, b) _Generic((a), \
+	fraction16: f16norm(a, b),\
+	fraction32: f32norm(a, b),\
+	fraction64: f64norm(a, b)\
+)
+#define f16norm(a, b) ((uint8_t)((a) >> (sizeof(fraction16)*4)) * (uint8_t)(b))
+#define f32norm(a, b) ((uint16_t)((a) >> (sizeof(fraction32)*4)) * (uint16_t)(b))
+#define f64norm(a, b) ((uint32_t)((a) >> (sizeof(fraction64)*4)) * (uint32_t)(b))
 
 #define fint(x) _Generic((x), \
 	fraction16: f16int(x),\
@@ -86,13 +102,4 @@ fraction64 f64div (fraction64, fraction64);
 fraction16 f16apr (float, unsigned int);
 fraction32 f32apr (float, unsigned int);
 fraction64 f64apr (double, unsigned int);
-
-#define fchk(x, y) _Generic((x), \
-	fraction16: f16chk(x, y),\
-	fraction32: f32chk(x, y),\
-	fraction64: f64chk(x, y)\
-)
-int f32chk (fraction32, fraction32);
-int f16chk (fraction16, fraction16);
-int f64chk (fraction64, fraction64);
 #endif
