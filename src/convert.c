@@ -4,129 +4,108 @@
 
 fraction32 f32apr (float x, unsigned int precision)
 {
-	uint16_t a1 = 0;
-	uint16_t b1 = 1;
+	unsigned int Aprev[2] = {1, 0};
+	unsigned int Bprev[2] = {0, 1};
 
-	uint16_t a2 = 1;
-	uint16_t b2 = 1;
+	unsigned int n;
+	unsigned int A = 0;
+	unsigned int B = 0;
 
-	float ax = 0;
-	float bx = 0;
-
-	const uint16_t top = (uint16_t)x;
-	x -= top;
-
-	for (; precision; precision--)
+	for (unsigned int i=0; i<precision; ++i) 
 	{
-		ax = a1 + a2;
-		bx = b1 + b2;
+		n  = (int)x;
+		x -= n;
+		x  = 1/x;
 
-		if ((ax/bx) < x)
-		{
-			a1 = ax;
-			b1 = bx;
+		A = Aprev[0] + n * Aprev[1];
+		Aprev[0] = Aprev[1];
+		Aprev[1] = A;
 
-			continue;
-		}
+		B = Bprev[0] + n * Bprev[1];
+		Bprev[0] = Bprev[1];
+		Bprev[1] = B;
 
-		if ((ax/bx) == x || (top * (uint16_t)bx) > UINT16_MAX)
+		if (((float)B / (float)A) == x)
 		{
 			break;
 		}
-
-		a2 = ax;
-		b2 = bx;
 	}
 
 	return Fraction(
-		((uint16_t)ax + (top * (uint16_t)bx)), 
-		(uint16_t)bx, 
+		B,
+		A,
 		fraction32
 	);
 }
 
 fraction16 f16apr (float x, unsigned int precision)
 {
-	uint8_t a1 = 0;
-	uint8_t b1 = 1;
+	unsigned int Aprev[2] = {1, 0};
+	unsigned int Bprev[2] = {0, 1};
 
-	uint8_t a2 = 1;
-	uint8_t b2 = 1;
+	unsigned int n;
+	unsigned int A = 0;
+	unsigned int B = 0;
 
-	float ax = 0;
-	float bx = 0;
-
-	const uint8_t top = (uint8_t)x;
-	x -= top;
-
-	for (; precision; precision--)
+	for (unsigned int i=0; i<precision; ++i) 
 	{
-		ax = a1 + a2;
-		bx = b1 + b2;
+		n  = (int)x;
+		x -= n;
+		x  = 1/x;
 
-		if ((ax/bx) < x)
-		{
-			a1 = ax;
-			b1 = bx;
+		A = Aprev[0] + n * Aprev[1];
+		Aprev[0] = Aprev[1];
+		Aprev[1] = A;
 
-			continue;
-		}
+		B = Bprev[0] + n * Bprev[1];
+		Bprev[0] = Bprev[1];
+		Bprev[1] = B;
 
-		if ((ax/bx) == x || (top * (uint8_t)bx) > UINT8_MAX)
+		if (((float)B / (float)A) == x)
 		{
 			break;
 		}
-
-		a2 = ax;
-		b2 = bx;
 	}
 
 	return Fraction(
-		((uint8_t)ax + (top * (uint8_t)bx)), 
-		(uint8_t)bx, 
+		B,
+		A,
 		fraction16
 	);
 }
 
 fraction64 f64apr (double x, unsigned int precision)
 {
-	uint32_t a1 = 0;
-	uint32_t b1 = 1;
+	unsigned int Aprev[2] = {1, 0};
+	unsigned int Bprev[2] = {0, 1};
 
-	uint32_t a2 = 1;
-	uint32_t b2 = 1;
+	unsigned int n;
+	unsigned int A = 0;
+	unsigned int B = 0;
 
-	float ax = 0;
-	float bx = 0;
-
-	const uint32_t top = (uint32_t)x;
-	x -= top;
-
-	for (; precision; precision--)
+	for (unsigned int i=0; i<precision; ++i) 
 	{
-		ax = a1 + a2;
-		bx = b1 + b2;
+		n  = (int)x;
+		x -= n;
+		x  = 1/x;
 
-		if ((ax/bx) < x)
-		{
-			a1 = ax;
-			b1 = bx;
+		A = Aprev[0] + n * Aprev[1];
+		Aprev[0] = Aprev[1];
+		Aprev[1] = A;
 
-			continue;
-		}
+		B = Bprev[0] + n * Bprev[1];
+		Bprev[0] = Bprev[1];
+		Bprev[1] = B;
 
-		if ((ax/bx) == x || (top * (uint32_t)bx) > UINT32_MAX)
+		if (((double)B / (double)A) == x)
 		{
 			break;
 		}
-
-		a2 = ax;
-		b2 = bx;
 	}
 
 	return Fraction(
-		((uint32_t)ax + (top * (uint32_t)bx)), 
-		(uint32_t)bx, 
+		B,
+		A,
 		fraction64
 	);
 }
