@@ -99,6 +99,15 @@ fraction16 f16div (fraction16, fraction16);
 fraction32 f32div (fraction32, fraction32);
 fraction64 f64div (fraction64, fraction64);
 
+#define fmod(x, y) _Generic((x), \
+	fraction16: f16mod(x, y),\
+	fraction32: f32mod(x, y),\
+	fraction64: f64mod(x, y)\
+)
+fraction16 f16mod (fraction16, fraction16);
+fraction32 f32mod (fraction32, fraction32);
+fraction64 f64mod (fraction64, fraction64);
+
 fraction16 f16apr (float, unsigned int);
 fraction32 f32apr (float, unsigned int);
 fraction64 f64apr (double, unsigned int);

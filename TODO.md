@@ -5,13 +5,12 @@
      - [x] Multiplication
      - [x] Division
      - [ ] Power
-     - [ ] Modulo
+     - [x] Modulo
      - [x] Convert to integer
      - [x] Convert to fraction
      - [x] Convert float to fraction
      - [x] Convert fraction to float
      - [x] Simplify
-     - [ ] Simple Mathematical Constants
  - 4 bytes ( 32 bit )
      - [x] Fraction Normalization
      - [x] Addition
@@ -19,13 +18,12 @@
      - [x] Multiplication
      - [x] Division
      - [ ] Power
-     - [ ] Modulo
+     - [x] Modulo
      - [x] Convert to integer
      - [x] Convert to fraction
      - [x] Convert float to fraction
      - [x] Convert fraction to float
      - [x] Simplify
-     - [ ] Simple Mathematical Constants
  - 8 bytes ( 64 bit )
      - [x] Fraction Normalization
      - [x] Addition
@@ -33,10 +31,9 @@
      - [x] Multiplication
      - [x] Division
      - [ ] Power
-     - [ ] Modulo
+     - [x] Modulo
      - [x] Convert to integer
      - [x] Convert to fraction
      - [x] Convert float to fraction
      - [x] Convert fraction to float
      - [x] Simplify
-     - [ ] Simple Mathematical Constants
